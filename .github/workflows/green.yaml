@@ -1,0 +1,26 @@
+name: gaming
+
+on:
+  push:
+    branches:
+      - master
+  schedule:
+    - cron:  "*/5 * * * *"
+
+jobs:
+  GREEN-GITHUB-STATS-GO-BRRRRRRRRRRRRR:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+          
+      - name: clout go brrrr
+        run: |
+          chmod u+x ./commiter.sh
+          ./commiter.sh
+          
+      - name: BRRRRRRRRR
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          force: true
+          directory: "."
+          github_token: ${{ secrets.TOKEN }}
