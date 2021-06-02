@@ -14,4 +14,4 @@ update=$(date '+%Y-%m-%d at %HH:%MM:%SS')
 echo "# last updated on $update" > README.md
 git config --global user.email $email
 git config --global user.name $username
-git commit -m $random_quote
+git commit -am $random_quote
